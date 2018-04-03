@@ -1,0 +1,5 @@
+Today we are going to look at a full text search in MongoDB and how you can use it from Node.js. Before we go any further, you'll need a MongoDB 2.6 system. MongoHQ users will also need to be running on a paid account, either an Elastic Deployment or dedicated account, because we don't support full text search on the free sandboxes.
+
+Now, full text search in MongoDB is a language sensitive text searching engine which scores matches. There's one big gotcha you need to know up front and that is you can only have one full text searchable field per collection. That means no documents with multiple indexed text fields for searching. If your schema is that complex and needs full text searching, there are better solutions like Elastic Search.
+
+To explore full text search, we're going to create a small, and very unpolished web application and walk through the various parts. We open as always by bringing in the various libraries we need. We will be using the Express web framework and the MongoDB Node.js native driver so...
