@@ -14,13 +14,10 @@ app.use(function(request, response) {
 
     if(agent.toLowerCase().match(/chrome/)) {
         response.send('<h1>Hello chrome!</h1>');
-        console.log(agent.toLowerCase());
-        
     }else if(agent.toLowerCase().match(/explorer/)) {
         response.send('<h1>Hello explorer!</h1>');
     }else {
         response.send('<h1>Hello express!</h1>');
-        console.log(agent.toLowerCase());
     }
 
     /*
